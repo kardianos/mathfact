@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math facts</title>
+	
+	<script type="text/javascript" src="http://www.freewebs.com/p.js"></script>
+	<script src="lib/js/jquery-2.0.3.min.js"></script>
+	
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<a id="clearData" href="#">Clear Data</a>
+		
+		<ul id="menu">
+			<li id="addition">Addition</li>
+			<li id="subtraction">Subtraction</li>
+			<li id="multiplication">Multiplication</li>
+			<li id="division">Division</li>
+		</ul>
+		
+		<table id="facts">
+			<tr><th class="col1"></th><th>Beginner</th><th>Advanced</th><th>Expert</th></tr>
+			<tr id="row0"><td class="col1">0's</td><td><div id="00_20" class="button start 04_20_req"></div></td><td><div id="00_50" class="button start 04_50_req"></div></td><td><div id="00_100" class="button start 04_100_req"></div></td></tr>
+			<tr><td class="col1">1's</td><td><div id="11_20" class="button start 04_20_req"></div></td><td><div id="11_50" class="button start 04_50_req"></div></td><td><div id="11_100" class="button start 04_100_req"></div></td></tr>
+			<tr><td class="col1">2's</td><td><div id="22_20" class="button start 04_20_req"></div></td><td><div id="22_50" class="button start 04_50_req"></div></td><td><div id="22_100" class="button start 04_100_req"></div></td></tr>
+			<tr><td class="col1">3's</td><td><div id="33_20" class="button start 04_20_req"></div></td><td><div id="33_50" class="button start 04_50_req"></div></td><td><div id="33_100" class="button start 04_100_req"></div></td></tr>
+			<tr><td class="col1">4's</td><td><div id="44_20" class="button start 04_20_req"></div></td><td><div id="44_50" class="button start 04_50_req"></div></td><td><div id="44_100" class="button start 04_100_req"></div></td></tr>
+			<tr>
+				<td class="col1">0 - 4's</td>
+				<td><div id="04_20" class="button start 55_20_req 66_20_req 77_20_req 88_20_req 99_20_req"></div></td>
+				<td><div id="04_50" class="button start 55_50_req 66_50_req 77_50_req 88_50_req 99_50_req"></div></td>
+				<td><div id="04_100" class="button start 55_100_req 66_100_req 77_100_req 88_100_req 99_100_req"></div></td>
+			</tr>
+			<tr><td class="col1">5's</td><td><div id="55_20" class="button start 59_20_req"></div></td><td><div id="55_50" class="button start 59_50_req"></div></td><td><div id="55_100" class="button start 59_100_req"></div></td></tr>
+			<tr><td class="col1">6's</td><td><div id="66_20" class="button start 59_20_req"></div></td><td><div id="66_50" class="button start 59_50_req"></div></td><td><div id="66_100" class="button start 59_100_req"></div></td></tr>
+			<tr><td class="col1">7's</td><td><div id="77_20" class="button start 59_20_req"></div></td><td><div id="77_50" class="button start 59_50_req"></div></td><td><div id="77_100" class="button start 59_100_req"></div></td></tr>
+			<tr><td class="col1">8's</td><td><div id="88_20" class="button start 59_20_req"></div></td><td><div id="88_50" class="button start 59_50_req"></div></td><td><div id="88_100" class="button start 59_100_req"></div></td></tr>
+			<tr><td class="col1">9's</td><td><div id="99_20" class="button start 59_20_req"></div></td><td><div id="99_50" class="button start 59_50_req"></div></td><td><div id="99_100" class="button start 59_100_req"></div></td></tr>
+			<tr>
+				<td class="col1">5 - 9's</td>
+				<td><div id="59_20" class="button start 09_20_req"></div></td>
+				<td><div id="59_50" class="button start 09_50_req"></div></td>
+				<td><div id="59_100" class="button start 09_100_req"></div></td>
+			</tr>
+			<tr>
+				<td class="col1">0 - 9's</td>
+				<td><div id="09_20" class="button start 00_50_req 11_50_req 22_50_req 33_50_req 44_50_req"></div></td>
+				<td><div id="09_50" class="button start 00_100_req 11_100_req 22_100_req 33_100_req 44_100_req"></div></td>
+				<td><div id="09_100" class="button start"></div></td>
+			</tr>
+		</table>
+	</div>
+	<div id="problems">
+		<a id="backToMenu" href="#">Back to Menu</a>
+		
+		<div id="progress" class="section">
+			<div>Time: <span id="time"></span></div>
+			<div style="float:left; margin-right:50px"><span class="numCorrect"></span> / <span class="numTotal" /></span> Correct</div>
+			<div><span class="numCompleted"></span> / <span class="numTotal"></span> Completed</div>
+			
+		</div>
+		<div style="clear:both"></div>
+		<div id="question" class="section">
+			<span id="operand1"></span>&nbsp;<span id="operator"></span>&nbsp;<span id="operand2"></span> = ?
+		</div>
+
+		<div class="section">
+			<div id="answers">
+				<ul>
+					<li id="answer0"></li>
+					<li id="answer1"></li>
+					<li id="answer2"></li>
+					<li id="answer3"></li>
+				</ul>
+			</div>
+			<div id="wrongAnswerMessage">Sorry, try again.</div>
+			<div style="clear:both"></div>
+		</div>
+		<div id="finish" class="button">Finish</div>
+
+		<div style="clear:both"></div>
+	</div>
+	<div id="results">
+		<div id="outOfTime" class="section">You ran out of time!</div>
+		<div class="section">You finished <span class="numCompleted"></span> / <span class="numTotal"></span> problems</div>
+		<div class="section">You got <span class="numCorrect"></span> / <span class="numTotal"></span> correct</div>
+		<div class="section"><span id="resultMessage"></span></div>
+		<div id="backToMenu2" class="section button">Back to Menu</div>
+	</div>
+<!-- --><script type="text/javascript" src="http://static.websimages.com/static/global/js/webs/usersites/escort.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script></body>
+</html>

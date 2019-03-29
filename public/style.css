@@ -1,0 +1,23 @@
+body { padding:30px 0 0 50px; font-family:Arial }
+h1 { font-size:50px }
+.section { padding-bottom:20px }
+.button, #question, #answers { font-size:30px }
+#menu {list-style-type:none; border:solid 1px black; width:900px; margin-left:155px }
+#menu li {display:inline-block; padding:5px 40px 5px 40px; font-size:30px}
+#menu .selected { color:Blue }
+#menu li:hover:not(.selected) { cursor:pointer; color:LightBlue }
+#facts { border-collapse:collapse }
+#facts th { font-size:30px; width:300px }
+#facts td { font-size:50px; padding:10px 5px 5px 0 }
+#facts .col1 {width:150px}
+.start { width:290px }
+.start img { vertical-align:text-bottom }
+#progress { padding-top:10px }
+#question { clear:both }
+#answers ul { list-style-type:none; margin:0; padding:0}
+.button, #answers li { float:left; border:solid 1px Black; padding:10px; text-align:center; min-width:40px }
+#answers li { margin-right:10px }
+.button:hover:not(.locked), .hover { cursor:pointer; background-color:LightBlue }
+.wrongSelected, #wrongAnswerMessage { color:Red }
+#wrongAnswerMessage, #progress, #results { font-size:20px }
+#wrongAnswerMessage { float:left; padding:15px 0 0 20px }
